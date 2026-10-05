@@ -1,0 +1,78 @@
+.stayflow-alert {
+    position: fixed;
+    top: 82px;
+    left: 50%;
+    z-index: 1200;
+    width: calc(100% - 28px);
+    max-width: 500px;
+    transform: translateX(-50%);
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    border: 1px solid var(--sf-border);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, .97);
+    box-shadow: 0 15px 40px rgba(15, 23, 42, .13);
+    animation: stayflowAlertIn .35s ease;
+    backdrop-filter: blur(16px);
+}
+
+.stayflow-alert-icon {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+}
+
+.stayflow-alert.success .stayflow-alert-icon {
+    color: var(--sf-success);
+    background: #dcfce7;
+}
+
+.stayflow-alert.error .stayflow-alert-icon {
+    color: var(--sf-danger);
+    background: #fee2e2;
+}
+
+.stayflow-alert strong,
+.stayflow-alert span {
+    display: block;
+}
+
+.stayflow-alert strong {
+    color: var(--sf-dark);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.stayflow-alert span {
+    margin-top: 2px;
+    color: var(--sf-muted);
+    font-size: 11px;
+}
+
+.stayflow-alert-close {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    flex: 0 0 30px;
+    border: 0;
+    border-radius: 9px;
+    color: #94a3b8;
+    background: #f8fafc;
+}
+
+@keyframes stayflowAlertIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}

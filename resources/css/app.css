@@ -1,9 +1,6 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./roomora/app_shell.css";
+@import "./roomora/mobile_navigation.css";
+@import "./roomora/alerts.css";
+@import "./roomora/home.css";
+@import "./roomora/rooms.css";
