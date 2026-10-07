@@ -1,0 +1,55 @@
+.booking-list {
+    display: grid;
+    gap: 12px;
+}
+.booking-card {
+    display: block;
+    padding: 14px;
+    border: 1px solid var(--sf-border);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 7px 25px rgba(15, 23, 42, 0.05);
+    transition: 0.2s ease;
+}
+.booking-card:active {
+    transform: scale(0.985);
+}
+.booking-card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.booking-room-icon {
+    width: 43px;
+    height: 43px;
+    flex: 0 0 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    color: var(--sf-primary);
+    background: var(--sf-primary-soft);
+}
+.booking-room-info {
+    min-width: 0;
+    flex: 1;
+}
+.booking-room-info > span {
+    color: var(--sf-primary);
+    font-size: 8px;
+    font-weight: 850;
+    letter-spacing: 0.5px;
+}
+.booking-room-info h3 {
+    margin: 1px 0;
+    color: var(--sf-dark);
+    font-size: 13px;
+    font-weight: 800;
+}
+.booking-room-info p {
+    margin: 0;
+    overflow: hidden;
+    color: var(--sf-muted);
+    font-size: 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

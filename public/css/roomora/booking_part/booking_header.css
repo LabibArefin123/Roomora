@@ -1,0 +1,54 @@
+.booking-page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.booking-kicker,
+.booking-section-heading span,
+.profile-section-heading span {
+    color: var(--sf-primary);
+    font-size: 9px;
+    font-weight: 850;
+    letter-spacing: 0.7px;
+}
+.booking-page-header h1 {
+    margin: 3px 0;
+    color: var(--sf-dark);
+    font-size: 26px;
+    font-weight: 850;
+    letter-spacing: -0.7px;
+}
+.booking-page-header p {
+    margin: 0;
+    color: var(--sf-muted);
+    font-size: 10px;
+}
+.booking-add-btn {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: #fff;
+    background: var(--sf-primary);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+.booking-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.booking-section-heading h2 {
+    margin: 2px 0 0;
+    color: var(--sf-dark);
+    font-size: 17px;
+    font-weight: 800;
+}
+.booking-section-heading > i {
+    color: #cbd5e1;
+    font-size: 18px;
+}

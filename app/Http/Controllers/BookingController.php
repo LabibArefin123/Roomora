@@ -29,7 +29,7 @@ class BookingController extends Controller
 
         $customers = Customer::orderBy('name')->get();
 
-        return view('bookings.create', compact(
+        return view('layouts.bookings.create', compact(
             'rooms',
             'customers'
         ));
@@ -136,7 +136,7 @@ class BookingController extends Controller
             'customer',
         ]);
 
-        return view('bookings.show', compact('booking'));
+        return view('layouts.bookings.show', compact('booking'));
     }
 
     public function updateStatus(

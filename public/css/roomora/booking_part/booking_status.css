@@ -1,0 +1,22 @@
+.booking-status {
+    flex: 0 0 auto;
+    color: #64748b;
+    background: #f1f5f9;
+}
+.booking-status.pending {
+    color: #b45309;
+    background: #fef3c7;
+}
+.booking-status.confirmed,
+.booking-status.checked_in {
+    color: #15803d;
+    background: #dcfce7;
+}
+.booking-status.checked_out {
+    color: #475569;
+    background: #f1f5f9;
+}
+.booking-status.cancelled {
+    color: #b91c1c;
+    background: #fee2e2;
+}

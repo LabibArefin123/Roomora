@@ -29,8 +29,17 @@
     <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_actions.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_content.css') }}">
 
+    {{-- Booking Part --}}
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_body.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_summary.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_card.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_dates.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_status.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_footer.css') }}">
     {{-- Navigation Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_form.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_show.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/mobile_navigation.css') }}">
 
     {{-- Alert Part --}}
