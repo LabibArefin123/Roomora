@@ -33,7 +33,7 @@ class RoomController extends Controller
             ->paginate(10)
             ->withQueryString();
 
-        return view('rooms.index', compact('rooms'));
+        return view('layouts.rooms.index', compact('rooms'));
     }
 
     public function show(Room $room)
@@ -42,6 +42,6 @@ class RoomController extends Controller
             'bookings.customer',
         ]);
 
-        return view('rooms.show', compact('room'));
+        return view('layouts.rooms.show', compact('room'));
     }
 }

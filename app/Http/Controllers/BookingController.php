@@ -18,7 +18,7 @@ class BookingController extends Controller
             ->latest()
             ->paginate(10);
 
-        return view('bookings.index', compact('bookings'));
+        return view('layouts.bookings.index', compact('bookings'));
     }
 
     public function create()

@@ -8,7 +8,7 @@
         <div class="home-topbar">
             <div>
                 <span class="home-greeting">Welcome back 👋</span>
-                <h1>StayFlow</h1>
+                <h1>Roomora</h1>
                 <p>Book smart. Stay comfortable.</p>
             </div>
 
