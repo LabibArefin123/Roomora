@@ -1,0 +1,15 @@
+:root {
+    --sf-primary: #2563eb;
+    --sf-primary-dark: #1d4ed8;
+    --sf-primary-soft: #eff6ff;
+    --sf-dark: #0f172a;
+    --sf-text: #1e293b;
+    --sf-muted: #64748b;
+    --sf-border: #e2e8f0;
+    --sf-bg: #f8fafc;
+    --sf-white: #ffffff;
+    --sf-success: #16a34a;
+    --sf-danger: #dc2626;
+    --sf-radius: 20px;
+    --sf-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}

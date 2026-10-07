@@ -1,0 +1,14 @@
+.stayflow-alert strong,
+.stayflow-alert span {
+    display: block;
+}
+.stayflow-alert strong {
+    color: var(--sf-dark);
+    font-size: 12px;
+    font-weight: 800;
+}
+.stayflow-alert span {
+    margin-top: 2px;
+    color: var(--sf-muted);
+    font-size: 11px;
+}

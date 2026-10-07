@@ -1,0 +1,13 @@
+.stayflow-home {
+    animation: stayflowPageIn 0.35s ease;
+}
+@keyframes stayflowPageIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,8 +1,29 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
-@import "./roomora/app_shell.css";
+/**App Shell Part */
+@import "./roomora/app_part/app_variables.css";
+@import "./roomora/app_part/app_reset.css";
+@import "./roomora/app_part/app_wrapper.css";
+@import "./roomora/app_part/app_header.css";
+@import "./roomora/app_part/app_brand.css";
+@import "./roomora/app_part/app_actions.css";
+@import "./roomora/app_part/app_content.css";
+
+/**Alert Part */
 @import "./roomora/mobile_navigation.css";
-@import "./roomora/alerts.css";
-@import "./roomora/home.css";
+@import "./roomora/alert_part/alert_base.css";
+@import "./roomora/alert_part/alert_content.css";
+@import "./roomora/alert_part/alert_actions.css";
+@import "./roomora/alert_part/alert_status.css";
+
+/**Home Part */
+@import "./roomora/home_part/home_body.css";
+@import "./roomora/home_part/home_header.css";
+@import "./roomora/home_part/home_stats.css";
+@import "./roomora/home_part/home_rooms.css";
+@import "./roomora/home_part/home_status.css";
+@import "./roomora/home_part/home_bookings.css";
+
+/**Room Part */
 @import "./roomora/room_part/room_body.css";
 @import "./roomora/room_part/room_header.css";
 @import "./roomora/room_part/room_filter.css";

@@ -29,7 +29,7 @@ class HomeController extends Controller
             ->take(5)
             ->get();
 
-        return view('home.index', compact(
+        return view('layouts.home.index', compact(
             'availableRooms',
             'activeBookings',
             'rooms',
