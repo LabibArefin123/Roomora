@@ -3,4 +3,10 @@
 @import "./roomora/mobile_navigation.css";
 @import "./roomora/alerts.css";
 @import "./roomora/home.css";
-@import "./roomora/rooms.css";
+@import "./roomora/room_part/room_body.css";
+@import "./roomora/room_part/room_header.css";
+@import "./roomora/room_part/room_filter.css";
+@import "./roomora/room_part/room_results.css";
+@import "./roomora/room_part/room_card.css";
+@import "./roomora/room_part/room_content.css";
+@import "./roomora/room_part/room_footer.css";

@@ -1,0 +1,40 @@
+.rooms-topbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.rooms-topbar > div {
+    min-width: 0;
+}
+.rooms-topbar span {
+    color: var(--sf-primary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+.rooms-topbar h1 {
+    margin: 3px 0;
+    color: var(--sf-dark);
+    font-size: 25px;
+    font-weight: 850;
+    letter-spacing: -0.6px;
+}
+.rooms-topbar p {
+    margin: 0;
+    color: var(--sf-muted);
+    font-size: 10px;
+}
+.rooms-add-btn {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: #fff;
+    background: var(--sf-primary);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
