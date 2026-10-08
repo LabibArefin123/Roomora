@@ -36,8 +36,11 @@
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_card.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_dates.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_status.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_empty.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_pagination.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_footer_resp.css') }}">
     {{-- Navigation Part --}}
+    <link rel="stylesheet" href="{{ asset('css/roomora/profile.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_form.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_show.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/mobile_navigation.css') }}">
@@ -181,8 +184,8 @@
                 <span>Rooms</span>
             </a>
 
-
-            <a href="#" class="stayflow-nav-item">
+            <a href="{{ route('profiles.index') }}"
+                class="stayflow-nav-item {{ request()->routeIs('profiles.*') ? 'active' : '' }}">
 
                 <span class="stayflow-nav-icon">
                     <i class="fas fa-user"></i>

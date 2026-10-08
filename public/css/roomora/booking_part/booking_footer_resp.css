@@ -1,0 +1,195 @@
+.booking-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 24px;
+    padding: 15px 17px;
+    border: 1px solid #e8edf5;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #fff 0%, #f9fbff 100%);
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.035);
+}
+.booking-pagination-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--sf-muted);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.booking-pagination-info .current-page {
+    color: var(--sf-dark);
+    font-size: 13px;
+    font-weight: 800;
+}
+.booking-pagination-info .page-divider {
+    color: #cbd5e1;
+    margin: 0 2px;
+}
+.booking-pagination-info .total-pages {
+    color: var(--sf-muted);
+    font-weight: 600;
+}
+.booking-pagination .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+.booking-pagination .page-item {
+    margin: 0;
+}
+.booking-pagination .page-link {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px !important;
+    color: #475569;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.025);
+    transition: all 0.2s ease;
+}
+.booking-pagination .page-link i,
+.booking-pagination .page-link svg {
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+}
+.booking-pagination .page-link:hover {
+    color: var(--sf-primary);
+    border-color: var(--sf-primary);
+    background: var(--sf-primary-soft);
+    transform: translateY(-1px);
+}
+.booking-pagination .page-item.active .page-link {
+    color: #fff;
+    border-color: var(--sf-primary);
+    background: var(--sf-primary);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+}
+.booking-pagination .page-item.disabled .page-link {
+    color: #cbd5e1;
+    border-color: #edf1f6;
+    background: #f8fafc;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+.booking-pagination .page-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08);
+}
+.booking-pagination .page-link[aria-label="Previous"],
+.booking-pagination .page-link[aria-label="Next"] {
+    font-size: 0;
+}
+.booking-pagination .page-link[aria-label="Previous"]::after,
+.booking-pagination .page-link[aria-label="Next"]::after {
+    content: none;
+    display: none;
+}
+.booking-pagination .page-link i {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+}
+.booking-empty {
+    padding: 45px 20px;
+    text-align: center;
+    border: 1px dashed #cbd5e1;
+    border-radius: 22px;
+    background: #fff;
+}
+.booking-empty-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    color: var(--sf-primary);
+    background: var(--sf-primary-soft);
+    font-size: 24px;
+}
+.booking-empty h2 {
+    margin: 0;
+    color: var(--sf-dark);
+    font-size: 17px;
+    font-weight: 800;
+}
+.booking-empty p {
+    max-width: 290px;
+    margin: 6px auto 17px;
+    color: var(--sf-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+.booking-empty a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 16px;
+    border: 1px solid var(--sf-primary);
+    border-radius: 12px;
+    color: #fff;
+    background: var(--sf-primary);
+    font-size: 12px;
+    font-weight: 750;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.1);
+    transition: all 0.2s ease;
+}
+.booking-empty a:hover {
+    color: #fff;
+    filter: brightness(0.95);
+    transform: translateY(-1px);
+}
+@media (max-width: 480px) {
+    .booking-pagination {
+        gap: 10px;
+        margin-top: 18px;
+        padding: 12px;
+        border-radius: 14px;
+    }
+    .booking-pagination-info {
+        gap: 4px;
+        font-size: 11px;
+    }
+    .booking-pagination-info .current-page {
+        font-size: 12px;
+    }
+    .booking-pagination .pagination {
+        gap: 6px;
+    }
+    .booking-pagination .page-link {
+        width: 35px;
+        height: 35px;
+        border-radius: 11px !important;
+    }
+    .booking-empty {
+        padding: 35px 16px;
+    }
+}
+@media (max-width: 340px) {
+    .booking-pagination {
+        padding: 10px;
+    }
+    .booking-pagination .pagination {
+        gap: 4px;
+    }
+    .booking-pagination .page-link {
+        width: 32px;
+        height: 32px;
+    }
+}

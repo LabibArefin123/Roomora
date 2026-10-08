@@ -150,11 +150,25 @@
                 @endforeach
 
             </div>
-
-
             @if ($bookings->hasPages())
                 <div class="booking-pagination">
-                    {{ $bookings->links() }}
+                    <div class="booking-pagination-info"> <span>Page</span> <span
+                            class="current-page">{{ $bookings->currentPage() }}</span> <span class="page-divider">of</span>
+                        <span class="total-pages">{{ $bookings->lastPage() }}</span> </div>
+                    <nav aria-label="Booking pagination">
+                        <ul class="pagination">
+                            <li class="page-item {{ $bookings->onFirstPage() ? 'disabled' : '' }}">
+                                <a class="page-link" href="{{ $bookings->previousPageUrl() ?? '#' }}" aria-label="Previous"
+                                    @if ($bookings->onFirstPage()) aria-disabled="true" tabindex="-1" @endif> <i
+                                        class="bi bi-chevron-left"></i> </a>
+                            </li>
+                            <li class="page-item {{ $bookings->hasMorePages() ? '' : 'disabled' }}">
+                                <a class="page-link" href="{{ $bookings->nextPageUrl() ?? '#' }}" aria-label="Next"
+                                    @unless ($bookings->hasMorePages()) aria-disabled="true" tabindex="-1" @endunless> <i
+                                        class="bi bi-chevron-right"></i> </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             @endif
         @else
