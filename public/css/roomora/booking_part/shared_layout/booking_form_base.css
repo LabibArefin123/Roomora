@@ -1,0 +1,14 @@
+.roomora-booking-form {
+    animation: stayflowPageIn 0.35s ease;
+}
+.booking-form {
+    display: grid;
+    gap: 14px;
+}
+.booking-form-section {
+    padding: 16px;
+    border: 1px solid var(--sf-border);
+    border-radius: 21px;
+    background: #fff;
+    box-shadow: 0 6px 22px rgba(15, 23, 42, 0.045);
+}

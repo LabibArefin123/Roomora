@@ -1,0 +1,67 @@
+.booking-show-dates {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    padding: 15px;
+    border: 1px solid var(--sf-border);
+    border-radius: 19px;
+    background: #fff;
+    box-shadow: var(--sf-shadow);
+}
+.booking-show-date {
+    min-width: 70px;
+}
+.booking-show-date span,
+.booking-show-date small {
+    display: block;
+}
+.booking-show-date span {
+    color: #94a3b8;
+    font-size: 7px;
+    font-weight: 800;
+}
+.booking-show-date strong {
+    display: block;
+    margin-top: 3px;
+    color: var(--sf-dark);
+    font-size: 15px;
+    font-weight: 850;
+}
+.booking-show-date small {
+    color: var(--sf-muted);
+    font-size: 8px;
+}
+.booking-show-date.checkout {
+    text-align: right;
+}
+.booking-show-date-middle {
+    flex: 1;
+    min-width: 25px;
+    padding: 0 8px;
+    text-align: center;
+}
+.booking-show-date-middle > span {
+    color: var(--sf-primary);
+    font-size: 8px;
+    font-weight: 800;
+}
+.booking-show-date-middle > div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+    color: #cbd5e1;
+}
+.booking-show-date-middle > div span {
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+.booking-show-date-middle i:first-child {
+    color: #93c5fd;
+    font-size: 5px;
+}
+.booking-show-date-middle i:last-child {
+    color: var(--sf-primary);
+    font-size: 8px;
+}

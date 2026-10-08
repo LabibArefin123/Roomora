@@ -1,0 +1,44 @@
+.booking-form-actions {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 9px;
+    margin-top: 3px;
+}
+.booking-cancel-btn,
+.booking-submit-btn {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 0;
+    border-radius: 14px;
+    font-size: 10px;
+    font-weight: 800;
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+.booking-cancel-btn {
+    color: var(--sf-text);
+    background: #e2e8f0;
+}
+.booking-submit-btn {
+    color: #fff;
+    background: var(--sf-primary);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+.booking-cancel-btn:active,
+.booking-submit-btn:active,
+.booking-form-back:active {
+    transform: scale(0.97);
+}
+@media (min-width: 600px) {
+    .booking-form-section {
+        padding: 19px;
+    }
+    .booking-form-actions {
+        max-width: 460px;
+        margin-left: auto;
+    }
+}

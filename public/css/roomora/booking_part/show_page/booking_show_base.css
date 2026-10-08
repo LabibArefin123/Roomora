@@ -1,0 +1,33 @@
+.roomora-booking-show {
+    animation: stayflowPageIn 0.35s ease;
+}
+.booking-show-section {
+    margin-top: 25px;
+}
+.booking-show-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 11px;
+}
+.booking-show-section-icon {
+    width: 37px;
+    height: 37px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    color: var(--sf-primary);
+    background: var(--sf-primary-soft);
+}
+.booking-show-section-title h2 {
+    margin: 2px 0 0;
+    color: var(--sf-dark);
+    font-size: 15px;
+    font-weight: 800;
+}
+.booking-show-section-title span {
+    color: var(--sf-primary);
+    font-size: 8px;
+    font-weight: 850;
+    letter-spacing: 0.8px;
+}

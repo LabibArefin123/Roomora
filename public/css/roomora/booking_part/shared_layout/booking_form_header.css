@@ -1,0 +1,42 @@
+.booking-form-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.booking-form-back {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    display: grid;
+    place-items: center;
+    margin-top: 2px;
+    border-radius: 13px;
+    color: var(--sf-text);
+    background: #fff;
+    border: 1px solid var(--sf-border);
+    box-shadow: 0 5px 16px rgba(15, 23, 42, 0.05);
+}
+.booking-form-header > div {
+    min-width: 0;
+}
+.booking-form-header span,
+.booking-form-section-title span {
+    color: var(--sf-primary);
+    font-size: 8px;
+    font-weight: 850;
+    letter-spacing: 0.8px;
+}
+.booking-form-header h1 {
+    margin: 3px 0;
+    color: var(--sf-dark);
+    font-size: 24px;
+    font-weight: 850;
+    letter-spacing: -0.5px;
+}
+.booking-form-header p {
+    margin: 0;
+    color: var(--sf-muted);
+    font-size: 10px;
+    line-height: 1.5;
+}

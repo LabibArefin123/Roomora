@@ -1,0 +1,109 @@
+.booking-show-info-card{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    padding:14px;
+    border:1px solid var(--sf-border);
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 5px 18px rgba(15,23,42,.025);
+}
+.booking-show-avatar{
+    width:43px;
+    height:43px;
+    flex:0 0 43px;
+    display:grid;
+    place-items:center;
+    border-radius:14px;
+    color:var(--sf-primary);
+    background:var(--sf-primary-soft);
+    font-size:15px;
+    font-weight:850;
+}
+.booking-show-info-card strong,
+.booking-show-info-card span{
+    display:block;
+    overflow-wrap:anywhere;
+}
+.booking-show-info-card strong{
+    color:var(--sf-dark);
+    font-size:11px;
+    font-weight:800;
+}
+.booking-show-info-card span{
+    margin-top:3px;
+    color:var(--sf-muted);
+    font-size:8px;
+}
+.booking-show-info-card span i{
+    width:12px;
+    color:#94a3b8;
+}
+.booking-show-summary{
+    overflow:hidden;
+    border:1px solid var(--sf-border);
+    border-radius:18px;
+    background:#fff;
+}
+.booking-show-summary>div{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:12px 14px;
+    border-bottom:1px solid #f1f5f9;
+}
+.booking-show-summary>div:last-child{
+    border-bottom:0;
+}
+.booking-show-summary span{
+    color:var(--sf-muted);
+    font-size:9px;
+}
+.booking-show-summary strong{
+    color:var(--sf-dark);
+    font-size:10px;
+    font-weight:800;
+    text-align:right;
+    overflow-wrap:anywhere;
+}
+.booking-show-total{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    margin-top:16px;
+    padding:16px;
+    border-radius:20px;
+    color:#fff;
+    background:#0f172a;
+    box-shadow:0 12px 30px rgba(15,23,42,.13);
+}
+.booking-show-total span,
+.booking-show-total small{
+    display:block;
+}
+.booking-show-total span{
+    color:#93c5fd;
+    font-size:7px;
+    font-weight:850;
+    letter-spacing:.7px;
+}
+.booking-show-total small{
+    margin-top:4px;
+    color:#94a3b8;
+    font-size:8px;
+}
+.booking-show-total strong{
+    color:#fff;
+    font-size:17px;
+    font-weight:850;
+    white-space:nowrap;
+}
+@media (min-width:600px){
+    .booking-show-total{
+        max-width:600px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}

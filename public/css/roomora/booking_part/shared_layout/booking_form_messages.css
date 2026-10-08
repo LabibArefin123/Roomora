@@ -1,0 +1,33 @@
+.booking-form-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    border: 1px solid #fecaca;
+    border-radius: 16px;
+    background: #fef2f2;
+}
+.booking-form-error-icon {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: #dc2626;
+    background: #fee2e2;
+}
+.booking-form-error strong,
+.booking-form-error span {
+    display: block;
+}
+.booking-form-error strong {
+    color: #991b1b;
+    font-size: 9px;
+    font-weight: 800;
+}
+.booking-form-error span {
+    margin-top: 2px;
+    color: #b91c1c;
+    font-size: 8px;
+}

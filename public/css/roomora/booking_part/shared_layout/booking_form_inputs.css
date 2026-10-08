@@ -1,0 +1,42 @@
+.booking-input {
+    width: 100%;
+    min-height: 45px;
+    padding: 0 12px;
+    border: 1px solid var(--sf-border);
+    border-radius: 13px;
+    outline: 0;
+    color: var(--sf-text);
+    background: #f8fafc;
+    font-size: 10px;
+    transition: all 0.2s ease;
+}
+.booking-input:focus {
+    border-color: #93c5fd;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+.booking-input.is-invalid {
+    border-color: #fca5a5;
+}
+.booking-input-wrap {
+    position: relative;
+}
+.booking-input-wrap > i {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    z-index: 1;
+    color: #94a3b8;
+    font-size: 11px;
+    transform: translateY(-50%);
+}
+.booking-input.has-icon {
+    padding-left: 36px;
+}
+.booking-field-error {
+    display: block;
+    margin-top: 5px;
+    color: #dc2626;
+    font-size: 8px;
+    line-height: 1.4;
+}
