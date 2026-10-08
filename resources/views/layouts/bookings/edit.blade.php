@@ -38,7 +38,7 @@
                     <label for="customer_id">Guest</label>
 
                     <select name="customer_id" id="customer_id"
-                        class="booking-input @error('customer_id') is-invalid @enderror" required>
+                        class="booking-input @error('customer_id') is-invalid @enderror">
 
                         @foreach ($customers as $customer)
                             <option value="{{ $customer->id }}"
@@ -62,7 +62,7 @@
 
                         <input type="number" name="guests" id="guests"
                             class="booking-input has-icon @error('guests') is-invalid @enderror"
-                            value="{{ old('guests', $booking->guests) }}" min="1" required>
+                            value="{{ old('guests', $booking->guests) }}" min="1">
                     </div>
 
                     @error('guests')
@@ -86,8 +86,7 @@
                 <div class="booking-field">
                     <label for="room_id">Room</label>
 
-                    <select name="room_id" id="room_id" class="booking-input @error('room_id') is-invalid @enderror"
-                        required>
+                    <select name="room_id" id="room_id" class="booking-input @error('room_id') is-invalid @enderror">
 
                         @foreach ($rooms as $room)
                             <option value="{{ $room->id }}"
@@ -125,7 +124,7 @@
 
                         <input type="date" name="check_in" id="check_in"
                             class="booking-input @error('check_in') is-invalid @enderror"
-                            value="{{ old('check_in', $booking->check_in->format('Y-m-d')) }}" required>
+                            value="{{ old('check_in', $booking->check_in->format('Y-m-d')) }}">
 
                         @error('check_in')
                             <small class="booking-field-error">{{ $message }}</small>
@@ -137,7 +136,7 @@
 
                         <input type="date" name="check_out" id="check_out"
                             class="booking-input @error('check_out') is-invalid @enderror"
-                            value="{{ old('check_out', $booking->check_out->format('Y-m-d')) }}" required>
+                            value="{{ old('check_out', $booking->check_out->format('Y-m-d')) }}">
 
                         @error('check_out')
                             <small class="booking-field-error">{{ $message }}</small>
@@ -162,7 +161,7 @@
                 <div class="booking-field">
                     <label for="status">Status</label>
 
-                    <select name="status" id="status" class="booking-input" required>
+                    <select name="status" id="status" class="booking-input">
 
                         @foreach ([
             'pending' => 'Pending',

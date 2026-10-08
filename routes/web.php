@@ -12,4 +12,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::resource('rooms', RoomController::class);
 Route::resource('bookings', BookingController::class);
 Route::resource('customers', CustomerController::class);
+Route::put('/profiles/password', [ProfileController::class, 'updatePassword'])->name('profiles.password');
 Route::resource('profiles', ProfileController::class);

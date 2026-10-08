@@ -36,7 +36,7 @@
                     <label for="customer_id">Guest</label>
 
                     <select name="customer_id" id="customer_id"
-                        class="booking-input @error('customer_id') is-invalid @enderror" required>
+                        class="booking-input @error('customer_id') is-invalid @enderror">
 
                         <option value="">Select guest</option>
 
@@ -60,7 +60,7 @@
 
                         <input type="number" name="guests" id="guests"
                             class="booking-input has-icon @error('guests') is-invalid @enderror"
-                            value="{{ old('guests', 1) }}" min="1" required>
+                            value="{{ old('guests', 1) }}" min="1">
                     </div>
 
                     @error('guests')
@@ -84,8 +84,7 @@
                 <div class="booking-field">
                     <label for="room_id">Room</label>
 
-                    <select name="room_id" id="room_id" class="booking-input @error('room_id') is-invalid @enderror"
-                        required>
+                    <select name="room_id" id="room_id" class="booking-input @error('room_id') is-invalid @enderror">
 
                         <option value="">Select available room</option>
 
@@ -122,8 +121,7 @@
                         <label for="check_in">Check-in</label>
 
                         <input type="date" name="check_in" id="check_in"
-                            class="booking-input @error('check_in') is-invalid @enderror" value="{{ old('check_in') }}"
-                            required>
+                            class="booking-input @error('check_in') is-invalid @enderror" value="{{ old('check_in') }}">
 
                         @error('check_in')
                             <small class="booking-field-error">{{ $message }}</small>
@@ -134,8 +132,7 @@
                         <label for="check_out">Check-out</label>
 
                         <input type="date" name="check_out" id="check_out"
-                            class="booking-input @error('check_out') is-invalid @enderror" value="{{ old('check_out') }}"
-                            required>
+                            class="booking-input @error('check_out') is-invalid @enderror" value="{{ old('check_out') }}">
 
                         @error('check_out')
                             <small class="booking-field-error">{{ $message }}</small>

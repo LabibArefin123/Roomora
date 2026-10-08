@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
     {{-- App Shell Part --}}
     <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_variables.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_reset.css') }}">
@@ -30,19 +31,28 @@
     <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_content.css') }}">
 
     {{-- Booking Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_body.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_summary.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_card.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_dates.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_status.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_empty.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_pagination.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/booking_footer_resp.css') }}">
-    {{-- Navigation Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/profile.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_body.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_summary.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_card.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_dates.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_status.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_empty.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_pagination.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_footer_resp.css') }}">
+
+    {{-- Profile Part --}}
+    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_body.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_intro.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_about.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_footer.css') }}">
+
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_form.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_show.css') }}">
+    {{-- Navigation Part --}}
+    <link rel="stylesheet" href="{{ asset('css/roomora/ui_dropdown.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/mobile_navigation.css') }}">
 
     {{-- Alert Part --}}
@@ -75,36 +85,65 @@
 
         {{-- Top App Bar --}}
         <header class="stayflow-header">
-
             <div class="stayflow-header-inner">
-
                 <a href="{{ route('home') }}" class="stayflow-brand">
                     <span class="stayflow-brand-icon">
                         <i class="fas fa-hotel"></i>
                     </span>
-
                     <span>
                         <strong>Roomora</strong>
                         <small>Book. Stay. Enjoy.</small>
                     </span>
                 </a>
-
                 <div class="stayflow-header-actions">
-
                     <button type="button" class="stayflow-icon-btn" aria-label="Notifications">
                         <i class="far fa-bell"></i>
                         <span class="notification-dot"></span>
                     </button>
 
-                    <a href="#" class="stayflow-avatar" aria-label="Profile">
-                        <i class="fas fa-user"></i>
-                    </a>
+                    <div class="stayflow-profile-dropdown" id="profileDropdown">
+                        <button type="button" class="stayflow-avatar profile-dropdown-toggle"
+                            id="profileDropdownToggle" aria-label="Open profile menu" aria-expanded="false"
+                            aria-controls="profileDropdownMenu">
+                            <i class="fas fa-user"></i>
+                            <span class="profile-dropdown-indicator">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
 
+                        <div class="profile-dropdown-menu" id="profileDropdownMenu">
+                            <div class="profile-dropdown-header">
+                                <div class="profile-dropdown-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="profile-dropdown-user">
+                                    <strong>{{ auth()->user()->name ?? 'Guest User' }}</strong>
+                                    <span>{{ auth()->user()->email ?? 'Welcome to Roomora' }}</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-dropdown-divider"></div>
+
+                            @if (auth()->check())
+                                <a href="{{ route('profiles.edit', auth()->id()) }}" class="profile-dropdown-item">
+                                    <span class="profile-dropdown-item-icon">
+                                        <i class="fas fa-user-pen"></i>
+                                    </span>
+
+                                    <span class="profile-dropdown-item-content">
+                                        <strong>Edit Profile</strong>
+                                        <small>Manage your personal information</small>
+                                    </span>
+
+                                    <i class="fas fa-chevron-right profile-dropdown-arrow"></i>
+                                </a>
+                            @endif
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
         </header>
+
 
 
         {{-- Flash Messages --}}
@@ -209,7 +248,7 @@
             });
         });
     </script>
-
+    <script src="{{ asset('js/roomora/ui_dropdown.js') }}" defer></script>
 </body>
 
 </html>
