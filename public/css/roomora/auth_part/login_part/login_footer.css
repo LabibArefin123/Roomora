@@ -1,0 +1,35 @@
+.login-bottom-message {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px;
+    border: 1px solid #eef2f7;
+    border-radius: 14px;
+    background: #f8fafc;
+}
+.login-bottom-icon {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 34px;
+    border-radius: 10px;
+    background: #fff;
+    color: #f43f5e;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    font-size: 12px;
+}
+.login-bottom-message strong {
+    display: block;
+    color: #334155;
+    font-size: 10px;
+    font-weight: 750;
+}
+.login-bottom-message span {
+    display: block;
+    margin-top: 3px;
+    color: #94a3b8;
+    font-size: 9px;
+    line-height: 1.4;
+}

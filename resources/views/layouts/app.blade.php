@@ -30,6 +30,14 @@
     <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_actions.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_content.css') }}">
 
+    {{-- Auth Part Part --}}
+    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_visual.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_form.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_fields.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_resp.css') }}">
+
     {{-- Booking Part --}}
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_body.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_header.css') }}">
@@ -64,7 +72,7 @@
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_dates.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_details.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_actions.css') }}">
-    
+
     {{-- Navigation Part --}}
     <link rel="stylesheet" href="{{ asset('css/roomora/ui_dropdown.css') }}">
     <link rel="stylesheet" href="{{ asset('css/roomora/mobile_navigation.css') }}">
@@ -96,50 +104,92 @@
 <body>
 
     <div class="stayflow-app">
+        @if (auth()->check())
+            {{-- Top App Bar --}} <header class="stayflow-header">
+                <div class="stayflow-header-inner">
+                    <a href="{{ route('home') }}" class="stayflow-brand">
+                        <span class="stayflow-brand-icon">
+                            <i class="fas fa-hotel"></i>
+                        </span>
 
-        {{-- Top App Bar --}}
-        <header class="stayflow-header">
-            <div class="stayflow-header-inner">
-                <a href="{{ route('home') }}" class="stayflow-brand">
-                    <span class="stayflow-brand-icon">
-                        <i class="fas fa-hotel"></i>
-                    </span>
-                    <span>
-                        <strong>Roomora</strong>
-                        <small>Book. Stay. Enjoy.</small>
-                    </span>
-                </a>
-                <div class="stayflow-header-actions">
-                    <button type="button" class="stayflow-icon-btn" aria-label="Notifications">
-                        <i class="far fa-bell"></i>
-                        <span class="notification-dot"></span>
-                    </button>
+                        <span>
+                            <strong>Roomora</strong>
+                            <small>Book. Stay. Enjoy.</small>
+                        </span>
+                    </a>
 
-                    <div class="stayflow-profile-dropdown" id="profileDropdown">
-                        <button type="button" class="stayflow-avatar profile-dropdown-toggle"
-                            id="profileDropdownToggle" aria-label="Open profile menu" aria-expanded="false"
-                            aria-controls="profileDropdownMenu">
-                            <i class="fas fa-user"></i>
-                            <span class="profile-dropdown-indicator">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
+                    <div class="stayflow-header-actions">
+
+                        <button type="button" class="stayflow-icon-btn" aria-label="Notifications">
+                            <i class="far fa-bell"></i>
+                            <span class="notification-dot"></span>
                         </button>
 
-                        <div class="profile-dropdown-menu" id="profileDropdownMenu">
-                            <div class="profile-dropdown-header">
-                                <div class="profile-dropdown-avatar">
+                        <div class="stayflow-profile-dropdown" id="profileDropdown">
+
+                            <button type="button" class="stayflow-avatar profile-dropdown-toggle"
+                                id="profileDropdownToggle" aria-label="Open profile menu" aria-expanded="false"
+                                aria-controls="profileDropdownMenu">
+
+                                @if (auth()->user()->profile_photo)
+                                    <img src="{{ asset(auth()->user()->profile_photo) }}"
+                                        alt="{{ auth()->user()->name }}" class="stayflow-avatar-image">
+                                @else
                                     <i class="fas fa-user"></i>
-                                </div>
-                                <div class="profile-dropdown-user">
-                                    <strong>{{ auth()->user()->name ?? 'Guest User' }}</strong>
-                                    <span>{{ auth()->user()->email ?? 'Welcome to Roomora' }}</span>
-                                </div>
-                            </div>
+                                @endif
 
-                            <div class="profile-dropdown-divider"></div>
+                                <span class="profile-dropdown-indicator">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
 
-                            @if (auth()->check())
-                                <a href="{{ route('profiles.edit', auth()->id()) }}" class="profile-dropdown-item">
+                            </button>
+
+                            <div class="profile-dropdown-menu" id="profileDropdownMenu">
+
+                                <div class="profile-dropdown-header">
+
+                                    <div class="profile-dropdown-avatar">
+
+                                        @if (auth()->user()->profile_photo)
+                                            <img src="{{ asset(auth()->user()->profile_photo) }}"
+                                                alt="{{ auth()->user()->name }}">
+                                        @else
+                                            <i class="fas fa-user"></i>
+                                        @endif
+
+                                    </div>
+
+                                    <div class="profile-dropdown-user">
+                                        <strong>
+                                            {{ auth()->user()->name }}
+                                        </strong>
+
+                                        <span>
+                                            {{ auth()->user()->email }}
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                                <div class="profile-dropdown-divider"></div>
+
+                                <a href="{{ route('profiles.show', auth()->user()) }}" class="profile-dropdown-item">
+
+                                    <span class="profile-dropdown-item-icon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+
+                                    <span class="profile-dropdown-item-content">
+                                        <strong>My Profile</strong>
+                                        <small>View your Roomora profile</small>
+                                    </span>
+
+                                    <i class="fas fa-chevron-right profile-dropdown-arrow"></i>
+
+                                </a>
+
+                                <a href="{{ route('profiles.edit', auth()->user()) }}" class="profile-dropdown-item">
+
                                     <span class="profile-dropdown-item-icon">
                                         <i class="fas fa-user-pen"></i>
                                     </span>
@@ -150,14 +200,39 @@
                                     </span>
 
                                     <i class="fas fa-chevron-right profile-dropdown-arrow"></i>
+
                                 </a>
-                            @endif
+
+                                <div class="profile-dropdown-divider"></div>
+
+                                <form action="{{ route('logout') }}" method="POST" class="profile-logout-form">
+
+                                    @csrf
+
+                                    <button type="submit" class="profile-dropdown-item profile-logout-button">
+
+                                        <span class="profile-dropdown-item-icon">
+                                            <i class="fas fa-arrow-right-from-bracket"></i>
+                                        </span>
+
+                                        <span class="profile-dropdown-item-content">
+                                            <strong>Sign Out</strong>
+                                            <small>Leave your Roomora account</small>
+                                        </span>
+
+                                        <i class="fas fa-chevron-right profile-dropdown-arrow"></i>
+
+                                    </button>
+
+                                </form>
+
+                            </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
-        </header>
-
+            </header>
+        @endif
 
 
         {{-- Flash Messages --}}
@@ -201,56 +276,53 @@
             @yield('content')
         </main>
 
+        @if (auth()->check())
+            {{-- Mobile Bottom Navigation --}}
+            <nav class="stayflow-bottom-nav">
+                <a href="{{ route('home') }}"
+                    class="stayflow-nav-item {{ request()->routeIs('home') ? 'active' : '' }}">
 
-        {{-- Mobile Bottom Navigation --}}
-        <nav class="stayflow-bottom-nav">
+                    <span class="stayflow-nav-icon">
+                        <i class="fas fa-house"></i>
+                    </span>
 
-            <a href="{{ route('home') }}"
-                class="stayflow-nav-item {{ request()->routeIs('home') ? 'active' : '' }}">
-
-                <span class="stayflow-nav-icon">
-                    <i class="fas fa-house"></i>
-                </span>
-
-                <span>Home</span>
-            </a>
-
-
-            <a href="{{ route('bookings.index') }}"
-                class="stayflow-nav-item {{ request()->routeIs('bookings.*') ? 'active' : '' }}">
-
-                <span class="stayflow-nav-icon">
-                    <i class="fas fa-calendar-days"></i>
-                </span>
-
-                <span>Bookings</span>
-            </a>
+                    <span>Home</span>
+                </a>
 
 
-            <a href="{{ route('rooms.index') }}"
-                class="stayflow-nav-item {{ request()->routeIs('rooms.*') ? 'active' : '' }}">
+                <a href="{{ route('bookings.index') }}"
+                    class="stayflow-nav-item {{ request()->routeIs('bookings.*') ? 'active' : '' }}">
 
-                <span class="stayflow-nav-icon">
-                    <i class="fas fa-bed"></i>
-                </span>
+                    <span class="stayflow-nav-icon">
+                        <i class="fas fa-calendar-days"></i>
+                    </span>
 
-                <span>Rooms</span>
-            </a>
+                    <span>Bookings</span>
+                </a>
 
-            <a href="{{ route('profiles.index') }}"
-                class="stayflow-nav-item {{ request()->routeIs('profiles.*') ? 'active' : '' }}">
 
-                <span class="stayflow-nav-icon">
-                    <i class="fas fa-user"></i>
-                </span>
+                <a href="{{ route('rooms.index') }}"
+                    class="stayflow-nav-item {{ request()->routeIs('rooms.*') ? 'active' : '' }}">
 
-                <span>Profile</span>
-            </a>
+                    <span class="stayflow-nav-icon">
+                        <i class="fas fa-bed"></i>
+                    </span>
 
-        </nav>
+                    <span>Rooms</span>
+                </a>
 
+                <a href="{{ route('profiles.index') }}"
+                    class="stayflow-nav-item {{ request()->routeIs('profiles.*') ? 'active' : '' }}">
+
+                    <span class="stayflow-nav-icon">
+                        <i class="fas fa-user"></i>
+                    </span>
+
+                    <span>Profile</span>
+                </a>
+            </nav>
+        @endif
     </div>
-
     @stack('scripts')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -262,6 +334,7 @@
             });
         });
     </script>
+    <script src="{{ asset('js/roomora/password.js') }}"></script>
     <script src="{{ asset('js/roomora/ui_dropdown.js') }}" defer></script>
 </body>
 

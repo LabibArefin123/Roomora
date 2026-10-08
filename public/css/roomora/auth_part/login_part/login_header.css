@@ -1,0 +1,45 @@
+.roomora-login {
+    min-height: calc(100vh - 32px);
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    background: #f8fafc;
+    overflow: hidden;
+}
+.roomora-login-visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 32px);
+    padding: 46px 54px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(37, 99, 235, 0.18),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(124, 58, 237, 0.16),
+            transparent 32%
+        ),
+        #0f172a;
+    color: #fff;
+}
+.login-panel {
+    background: #fff;
+}
+.roomora-login-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 50px 56px;
+    background: #fff;
+}
+.login-mobile-brand {
+    display: none;
+}
