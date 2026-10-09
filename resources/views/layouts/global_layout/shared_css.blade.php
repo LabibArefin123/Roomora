@@ -69,11 +69,11 @@
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/index_page/room_content.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/index_page/room_footer.css') }}">
 
-  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/create_page/room_form_header.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/create_page/room_form_card.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/create_page/room_form_fields.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/create_page/room_form_actions.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/create_page/room_form_resp.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_header.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_card.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_fields.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_actions.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_resp.css') }}">
   
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/show_page/room_show_header.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/show_page/room_show_card.css') }}">
