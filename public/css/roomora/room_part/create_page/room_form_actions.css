@@ -1,0 +1,42 @@
+.room-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+.room-cancel-btn,
+.room-save-btn {
+    min-height: 43px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 18px;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 750;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.room-cancel-btn {
+    border: 1px solid var(--sf-border);
+    color: #64748b;
+    background: #fff;
+}
+.room-cancel-btn:hover {
+    color: var(--sf-dark);
+    background: #f8fafc;
+}
+.room-save-btn {
+    border: 0;
+    color: #fff;
+    background: var(--sf-primary);
+    box-shadow: 0 7px 17px rgba(37, 99, 235, 0.18);
+}
+.room-save-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.24);
+}

@@ -1,0 +1,32 @@
+@media (max-width: 650px) {
+    .room-form-header {
+        align-items: flex-start;
+    }
+    .room-form-header h1 {
+        font-size: 22px;
+    }
+    .room-back-btn {
+        padding: 10px;
+    }
+    .room-back-btn span {
+        display: none;
+    }
+    .room-form-card-header {
+        padding: 17px;
+    }
+    .room-form-fields {
+        grid-template-columns: 1fr;
+        gap: 17px;
+        padding: 18px;
+    }
+    .room-form-field-full {
+        grid-column: auto;
+    }
+    .room-form-actions {
+        flex-direction: column-reverse;
+    }
+    .room-cancel-btn,
+    .room-save-btn {
+        width: 100%;
+    }
+}

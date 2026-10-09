@@ -1,0 +1,36 @@
+.room-form-card{
+    overflow:hidden;
+    border:1px solid var(--sf-border);
+    border-radius:20px;
+    background:#fff;
+    box-shadow:0 8px 28px rgba(15,23,42,.045);
+}
+.room-form-card-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:20px 23px;
+    border-bottom:1px solid #f1f5f9;
+}
+.room-form-card-icon{
+    width:43px;
+    height:43px;
+    flex:0 0 43px;
+    display:grid;
+    place-items:center;
+    border-radius:13px;
+    color:var(--sf-primary);
+    background:var(--sf-primary-soft);
+    font-size:17px;
+}
+.room-form-card-header h2{
+    margin:0;
+    color:var(--sf-dark);
+    font-size:15px;
+    font-weight:800;
+}
+.room-form-card-header p{
+    margin:4px 0 0;
+    color:var(--sf-muted);
+    font-size:10px;
+}
