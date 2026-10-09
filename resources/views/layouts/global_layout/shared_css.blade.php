@@ -81,12 +81,12 @@
 
   {{-- Navigation Part --}}
   {{-- Start of UI Part --}}
-  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_layout.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_menu.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_items.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_user.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_logout.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_resp.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/profile_dropdown/ui_dropdown_layout.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/profile_dropdown/ui_dropdown_menu.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/profile_dropdown/ui_dropdown_items.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/profile_dropdown/ui_dropdown_user.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/profile_dropdown/ui_dropdown_logout.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/profile_dropdown/ui_dropdown_resp.css') }}">
   {{-- End of UI Part --}}
   {{-- Start of Notification UI Part --}}
   <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/notification_dropdown/notification_layout.css') }}">
