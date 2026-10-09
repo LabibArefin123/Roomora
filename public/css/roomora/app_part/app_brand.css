@@ -10,10 +10,15 @@
     flex: 0 0 42px;
     display: grid;
     place-items: center;
-    border-radius: 14px;
     color: #fff;
-    background: linear-gradient(145deg, var(--sf-primary), #60a5fa);
     box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
+}
+.stayflow-brand-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    border-radius: inherit;
 }
 .stayflow-brand strong,
 .stayflow-brand small {

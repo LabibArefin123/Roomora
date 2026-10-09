@@ -71,7 +71,7 @@ class ProfileController extends Controller
     {
         $user = auth()->user();
 
-        return view('profile.edit', compact('user'));
+        return view('layouts.profile.edit', compact('user'));
     }
 
     public function update(Request $request)

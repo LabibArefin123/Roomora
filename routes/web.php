@@ -8,8 +8,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])
         ->name('login');
@@ -20,6 +18,7 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::resource('rooms', RoomController::class);
     Route::resource('bookings', BookingController::class);
     Route::resource('customers', CustomerController::class);

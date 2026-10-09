@@ -21,309 +21,62 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    {{-- App Shell Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_variables.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_wrapper.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_brand.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_actions.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/app_part/app_content.css') }}">
-
-    {{-- Auth Part Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_visual.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_form.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_fields.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/auth_part/login_part/login_resp.css') }}">
-
-    {{-- Booking Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_body.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_summary.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_card.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_dates.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_status.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_empty.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_pagination.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/index_page/booking_footer_resp.css') }}">
-
-    {{-- Booking Create/Edit Shared Layout --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/shared_layout/booking_form_base.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/shared_layout/booking_form_header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/shared_layout/booking_form_sections.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/shared_layout/booking_form_inputs.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/shared_layout/booking_form_messages.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/shared_layout/booking_form_actions.css') }}">
-
-    {{-- Profile Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_body.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_intro.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_about.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_footer.css') }}">
-
-    {{-- Booking Show Page --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_base.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_hero.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_dates.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_details.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_actions.css') }}">
-
-    {{-- Navigation Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/ui_dropdown.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/mobile_navigation.css') }}">
-
-    {{-- Alert Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/alert_part/alert_base.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/alert_part/alert_content.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/alert_part/alert_actions.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/alert_part/alert_status.css') }}">
-
-    {{-- Home Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/home_part/home_body.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/home_part/home_header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/home_part/home_stats.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/home_part/home_rooms.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/home_part/home_status.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/home_part/home_bookings.css') }}">
-
-    {{-- Room Part --}}
-    <link rel="stylesheet" href="{{ asset('css/roomora/room_part/room_body.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/room_part/room_header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/room_part/room_filter.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/room_part/room_results.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/room_part/room_card.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/room_part/room_content.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/roomora/room_part/room_footer.css') }}">
+    {{-- Shared CSS Part --}}
+    @include('layouts.global_layout.shared_css')
 </head>
 
+
 <body>
+    @php
+        $isAuthPage = request()->routeIs('login');
+    @endphp
 
-    <div class="stayflow-app">
-        @if (auth()->check())
-            {{-- Top App Bar --}} <header class="stayflow-header">
-                <div class="stayflow-header-inner">
-                    <a href="{{ route('home') }}" class="stayflow-brand">
-                        <span class="stayflow-brand-icon">
-                            <i class="fas fa-hotel"></i>
-                        </span>
+    <div class="stayflow-app {{ $isAuthPage ? 'stayflow-auth-app' : '' }}">
+        @unless ($isAuthPage)
+            @include('layouts.global_layout.top_part')
 
-                        <span>
-                            <strong>Roomora</strong>
-                            <small>Book. Stay. Enjoy.</small>
-                        </span>
-                    </a>
-
-                    <div class="stayflow-header-actions">
-
-                        <button type="button" class="stayflow-icon-btn" aria-label="Notifications">
-                            <i class="far fa-bell"></i>
-                            <span class="notification-dot"></span>
-                        </button>
-
-                        <div class="stayflow-profile-dropdown" id="profileDropdown">
-
-                            <button type="button" class="stayflow-avatar profile-dropdown-toggle"
-                                id="profileDropdownToggle" aria-label="Open profile menu" aria-expanded="false"
-                                aria-controls="profileDropdownMenu">
-
-                                @if (auth()->user()->profile_photo)
-                                    <img src="{{ asset(auth()->user()->profile_photo) }}"
-                                        alt="{{ auth()->user()->name }}" class="stayflow-avatar-image">
-                                @else
-                                    <i class="fas fa-user"></i>
-                                @endif
-
-                                <span class="profile-dropdown-indicator">
-                                    <i class="fas fa-chevron-down"></i>
-                                </span>
-
-                            </button>
-
-                            <div class="profile-dropdown-menu" id="profileDropdownMenu">
-
-                                <div class="profile-dropdown-header">
-
-                                    <div class="profile-dropdown-avatar">
-
-                                        @if (auth()->user()->profile_photo)
-                                            <img src="{{ asset(auth()->user()->profile_photo) }}"
-                                                alt="{{ auth()->user()->name }}">
-                                        @else
-                                            <i class="fas fa-user"></i>
-                                        @endif
-
-                                    </div>
-
-                                    <div class="profile-dropdown-user">
-                                        <strong>
-                                            {{ auth()->user()->name }}
-                                        </strong>
-
-                                        <span>
-                                            {{ auth()->user()->email }}
-                                        </span>
-                                    </div>
-
-                                </div>
-
-                                <div class="profile-dropdown-divider"></div>
-
-                                <a href="{{ route('profiles.show', auth()->user()) }}" class="profile-dropdown-item">
-
-                                    <span class="profile-dropdown-item-icon">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-
-                                    <span class="profile-dropdown-item-content">
-                                        <strong>My Profile</strong>
-                                        <small>View your Roomora profile</small>
-                                    </span>
-
-                                    <i class="fas fa-chevron-right profile-dropdown-arrow"></i>
-
-                                </a>
-
-                                <a href="{{ route('profiles.edit', auth()->user()) }}" class="profile-dropdown-item">
-
-                                    <span class="profile-dropdown-item-icon">
-                                        <i class="fas fa-user-pen"></i>
-                                    </span>
-
-                                    <span class="profile-dropdown-item-content">
-                                        <strong>Edit Profile</strong>
-                                        <small>Manage your personal information</small>
-                                    </span>
-
-                                    <i class="fas fa-chevron-right profile-dropdown-arrow"></i>
-
-                                </a>
-
-                                <div class="profile-dropdown-divider"></div>
-
-                                <form action="{{ route('logout') }}" method="POST" class="profile-logout-form">
-
-                                    @csrf
-
-                                    <button type="submit" class="profile-dropdown-item profile-logout-button">
-
-                                        <span class="profile-dropdown-item-icon">
-                                            <i class="fas fa-arrow-right-from-bracket"></i>
-                                        </span>
-
-                                        <span class="profile-dropdown-item-content">
-                                            <strong>Sign Out</strong>
-                                            <small>Leave your Roomora account</small>
-                                        </span>
-
-                                        <i class="fas fa-chevron-right profile-dropdown-arrow"></i>
-
-                                    </button>
-
-                                </form>
-
-                            </div>
-                        </div>
-
+            @if (session('success'))
+                <div class="stayflow-alert success">
+                    <div class="stayflow-alert-icon">
+                        <i class="fas fa-check"></i>
                     </div>
+                    <div>
+                        <strong>Success</strong>
+                        <span>{{ session('success') }}</span>
+                    </div>
+                    <button type="button" class="stayflow-alert-close">
+                        <i class="fas fa-xmark"></i>
+                    </button>
                 </div>
-            </header>
-        @endif
+            @endif
 
-
-        {{-- Flash Messages --}}
-        @if (session('success'))
-            <div class="stayflow-alert success">
-                <div class="stayflow-alert-icon">
-                    <i class="fas fa-check"></i>
+            @if (session('error'))
+                <div class="stayflow-alert error">
+                    <div class="stayflow-alert-icon">
+                        <i class="fas fa-exclamation"></i>
+                    </div>
+                    <div>
+                        <strong>Something went wrong</strong>
+                        <span>{{ session('error') }}</span>
+                    </div>
+                    <button type="button" class="stayflow-alert-close">
+                        <i class="fas fa-xmark"></i>
+                    </button>
                 </div>
+            @endif
+        @endunless
 
-                <div>
-                    <strong>Success</strong>
-                    <span>{{ session('success') }}</span>
-                </div>
-
-                <button type="button" class="stayflow-alert-close">
-                    <i class="fas fa-xmark"></i>
-                </button>
-            </div>
-        @endif
-
-        @if (session('error'))
-            <div class="stayflow-alert error">
-                <div class="stayflow-alert-icon">
-                    <i class="fas fa-exclamation"></i>
-                </div>
-
-                <div>
-                    <strong>Something went wrong</strong>
-                    <span>{{ session('error') }}</span>
-                </div>
-
-                <button type="button" class="stayflow-alert-close">
-                    <i class="fas fa-xmark"></i>
-                </button>
-            </div>
-        @endif
-
-
-        {{-- Main Application Content --}}
-        <main class="stayflow-content">
+        <main class="{{ $isAuthPage ? 'stayflow-auth-content' : 'stayflow-content' }}">
             @yield('content')
         </main>
 
-        @if (auth()->check())
-            {{-- Mobile Bottom Navigation --}}
-            <nav class="stayflow-bottom-nav">
-                <a href="{{ route('home') }}"
-                    class="stayflow-nav-item {{ request()->routeIs('home') ? 'active' : '' }}">
-
-                    <span class="stayflow-nav-icon">
-                        <i class="fas fa-house"></i>
-                    </span>
-
-                    <span>Home</span>
-                </a>
-
-
-                <a href="{{ route('bookings.index') }}"
-                    class="stayflow-nav-item {{ request()->routeIs('bookings.*') ? 'active' : '' }}">
-
-                    <span class="stayflow-nav-icon">
-                        <i class="fas fa-calendar-days"></i>
-                    </span>
-
-                    <span>Bookings</span>
-                </a>
-
-
-                <a href="{{ route('rooms.index') }}"
-                    class="stayflow-nav-item {{ request()->routeIs('rooms.*') ? 'active' : '' }}">
-
-                    <span class="stayflow-nav-icon">
-                        <i class="fas fa-bed"></i>
-                    </span>
-
-                    <span>Rooms</span>
-                </a>
-
-                <a href="{{ route('profiles.index') }}"
-                    class="stayflow-nav-item {{ request()->routeIs('profiles.*') ? 'active' : '' }}">
-
-                    <span class="stayflow-nav-icon">
-                        <i class="fas fa-user"></i>
-                    </span>
-
-                    <span>Profile</span>
-                </a>
-            </nav>
-        @endif
+        @unless ($isAuthPage)
+            @include('layouts.global_layout.bottom_part')
+        @endunless
     </div>
+
     @stack('scripts')
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -334,8 +87,10 @@
             });
         });
     </script>
+
     <script src="{{ asset('js/roomora/password.js') }}"></script>
     <script src="{{ asset('js/roomora/ui_dropdown.js') }}" defer></script>
 </body>
+
 
 </html>

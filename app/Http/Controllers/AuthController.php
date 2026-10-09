@@ -14,7 +14,7 @@ class AuthController extends Controller
     public function showLogin()
     {
         if (Auth::check()) {
-            return redirect()->route('dashboard');
+            return redirect()->route('home');
         }
         $errors = session('errors');
         $notificationType = session('login_notification_type', 'default');

@@ -1,17 +1,25 @@
-.roomora-login {
-    min-height: calc(100vh - 32px);
+css .roomora-login {
+    position: relative;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
     background: #f8fafc;
-    overflow: hidden;
 }
 .roomora-login-visual {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: calc(100vh - 32px);
-    padding: 46px 54px;
+    align-self: stretch;
+    min-width: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: clamp(24px, 4vh, 46px) clamp(24px, 4vw, 54px);
     overflow: hidden;
     background:
         radial-gradient(
@@ -27,19 +35,40 @@
         #0f172a;
     color: #fff;
 }
-.login-panel {
-    background: #fff;
-}
 .roomora-login-panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
     width: 100%;
-    max-width: 500px;
-    margin: auto;
-    padding: 50px 56px;
+    max-width: 610px;
+    min-width: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0 auto;
+    padding: 35px clamp(24px, 4vw, 56px);
     background: #fff;
 }
 .login-mobile-brand {
     display: none;
+}
+.stayflow-auth-app {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+}
+.stayflow-auth-content {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+.stayflow-auth-content > * {
+    width: 100%;
 }

@@ -7,7 +7,7 @@
 
         <div class="profile-edit-header">
 
-            <a href="{{ route('profile') }}" class="profile-edit-back">
+            <a href="{{ route('profiles.index') }}" class="profile-edit-back">
                 <i class="fas fa-arrow-left"></i>
             </a>
 

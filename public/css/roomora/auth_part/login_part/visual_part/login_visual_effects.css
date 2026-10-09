@@ -1,0 +1,20 @@
+.login-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    pointer-events: none;
+}
+.login-glow-one {
+    width: 230px;
+    height: 230px;
+    top: -100px;
+    right: -70px;
+    background: rgba(59, 130, 246, 0.15);
+}
+.login-glow-two {
+    width: 180px;
+    height: 180px;
+    bottom: 12%;
+    left: -90px;
+    background: rgba(139, 92, 246, 0.12);
+}

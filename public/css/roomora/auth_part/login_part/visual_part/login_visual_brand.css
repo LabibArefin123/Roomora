@@ -1,0 +1,46 @@
+.login-brand,
+.login-mobile-brand {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.login-brand {
+    flex-shrink: 0;
+    justify-content: flex-start;
+}
+.login-brand-icon {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: #fff;
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.28);
+    font-size: 21px;
+}
+.login-brand-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    border-radius: inherit;
+}
+.login-brand strong {
+    display: block;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+}
+.login-brand span {
+    display: block;
+    margin-top: 3px;
+    color: #cbd5e1;
+    font-size: 11px;
+}
