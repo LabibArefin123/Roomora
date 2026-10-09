@@ -68,6 +68,7 @@
   {{-- Show Profile Part --}}
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/show_page/profile_body.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/show_page/profile_menu.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/show_page/profile_info.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/show_page/profile_intro.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/show_page/profile_about.css') }}">
 
