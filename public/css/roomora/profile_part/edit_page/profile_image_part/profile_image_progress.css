@@ -1,0 +1,44 @@
+.profile-image-progress{
+    position:absolute;
+    inset:0;
+    z-index:3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:5px;
+    color:#fff;
+    background:rgba(15,23,42,.58);
+    backdrop-filter:blur(3px);
+}
+.profile-image-progress[hidden]{
+    display:none;
+}
+.profile-image-progress svg{
+    width:100px;
+    height:100px;
+    overflow:visible;
+    transform:rotate(-90deg);
+}
+.profile-image-progress circle{
+    fill:none;
+    stroke-width:7;
+}
+.profile-image-progress-track{
+    stroke:rgba(255,255,255,.28);
+}
+.profile-image-progress-value{
+    stroke:#60a5fa;
+    stroke-linecap:round;
+    stroke-dasharray:270.18;
+    stroke-dashoffset:270.18;
+    transition:stroke-dashoffset .15s linear;
+}
+#profileImageProgressText{
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-size:16px;
+    font-weight:850;
+    transform:translate(-50%,-50%);
+}

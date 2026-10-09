@@ -1,0 +1,32 @@
+@media (max-width: 650px) {
+    .profile-image-modal {
+        padding: 12px;
+    }
+    .profile-image-modal-dialog {
+        max-height: 94vh;
+        border-radius: 19px;
+    }
+    .profile-image-modal-header {
+        padding: 16px;
+    }
+    .profile-image-modal-body {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 16px;
+    }
+    .profile-image-modal-visual {
+        min-height: 220px;
+    }
+    .profile-image-modal-visual img {
+        max-height: 320px;
+    }
+    .profile-image-modal-details {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 380px) {
+    .profile-image-modal-details {
+        grid-template-columns: 1fr;
+    }
+}

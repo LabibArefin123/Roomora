@@ -1,0 +1,14 @@
+.profile-image-modal-dialog:focus {
+    outline: none;
+}
+.profile-image-modal-close:focus-visible {
+    outline: 2px solid var(--sf-primary);
+    outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .profile-image-modal,
+    .profile-image-modal-dialog,
+    .profile-image-modal-close {
+        transition: none;
+    }
+}

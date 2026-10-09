@@ -89,6 +89,12 @@
     </script>
 
     <script src="{{ asset('js/roomora/password.js') }}"></script>
+    <script src="{{ asset('js/roomora/profile_page/profile_modal_init.js') }}" defer></script>
+    <script src="{{ asset('js/roomora/profile_page/profile_modal_helpers.js') }}" defer></script>
+    <script src="{{ asset('js/roomora/profile_page/profile_modal_preview.js') }}" defer></script>
+    <script src="{{ asset('js/roomora/profile_page/profile_modal_validation.js') }}" defer></script>
+    <script src="{{ asset('js/roomora/profile_page/profile_modal_events.js') }}" defer></script>
+    <script src="{{ asset('js/roomora/profile_page/profile_modal_upload.js') }}" defer></script>
     <script src="{{ asset('js/roomora/ui_dropdown.js') }}" defer></script>
 </body>
 

@@ -1,0 +1,31 @@
+@media (max-width:700px){
+    .profile-edit-photo-layout{
+        grid-template-columns:1fr;
+    }
+    .profile-edit-image-preview-card{
+        max-width:420px;
+        width:100%;
+        margin:0 auto;
+    }
+    .profile-edit-image-preview>img{
+        height:260px;
+    }
+}
+@media (max-width:420px){
+    .profile-edit-photo-section{
+        align-items:flex-start;
+        gap:11px;
+    }
+    .profile-edit-photo{
+        width:62px;
+        height:62px;
+        flex-basis:62px;
+        border-radius:19px;
+    }
+    .profile-edit-photo-info strong{
+        font-size:11px;
+    }
+    .profile-edit-photo-info span{
+        font-size:9px;
+    }
+}

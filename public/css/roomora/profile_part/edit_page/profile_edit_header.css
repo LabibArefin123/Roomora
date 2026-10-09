@@ -1,0 +1,40 @@
+.roomora-profile-edit {
+    animation: stayflowPageIn 0.35s ease;
+}
+.profile-edit-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.profile-edit-back {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    display: grid;
+    place-items: center;
+    margin-top: 2px;
+    border: 1px solid var(--sf-border);
+    border-radius: 13px;
+    color: var(--sf-text);
+    background: #fff;
+    box-shadow: 0 5px 16px rgba(15, 23, 42, 0.05);
+}
+.profile-edit-header span,
+.profile-edit-section-title span {
+    color: var(--sf-primary);
+    font-size: 8px;
+    font-weight: 850;
+    letter-spacing: 0.8px;
+}
+.profile-edit-header h1 {
+    margin: 3px 0;
+    color: var(--sf-dark);
+    font-size: 24px;
+    font-weight: 850;
+}
+.profile-edit-header p {
+    margin: 0;
+    color: var(--sf-muted);
+    font-size: 10px;
+}

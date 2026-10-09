@@ -1,0 +1,30 @@
+@media (min-width: 600px) {
+    .profile-edit-card,
+    .profile-password-card {
+        padding: 19px;
+    }
+    .profile-edit-actions {
+        max-width: 460px;
+        margin-left: auto;
+    }
+    .profile-password-btn {
+        max-width: 300px;
+        margin-left: auto;
+    }
+}
+@media (max-width: 480px) {
+    .profile-edit-header h1 {
+        font-size: 21px;
+    }
+    .profile-edit-photo-section {
+        align-items: flex-start;
+    }
+    .profile-edit-actions {
+        grid-template-columns: 1fr 1.4fr;
+    }
+    .profile-edit-card,
+    .profile-password-card {
+        padding: 13px;
+        border-radius: 17px;
+    }
+}

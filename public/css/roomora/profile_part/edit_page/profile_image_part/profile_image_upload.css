@@ -1,0 +1,53 @@
+.profile-photo-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    padding:9px 13px;
+    border:1px solid rgba(37,99,235,.12);
+    border-radius:11px;
+    color:var(--sf-primary);
+    background:var(--sf-primary-soft);
+    font-size:10px;
+    font-weight:800;
+    cursor:pointer;
+    transition:background .2s ease,transform .2s ease;
+}
+.profile-photo-btn:hover{
+    background:#dbeafe;
+}
+.profile-photo-btn:active{
+    transform:scale(.97);
+}
+.profile-image-validation{
+    display:flex;
+    align-items:flex-start;
+    gap:9px;
+    margin-top:18px;
+    padding:12px 13px;
+    border:1px solid #dbeafe;
+    border-radius:13px;
+    color:#1d4ed8;
+    background:#eff6ff;
+    font-size:10px;
+    line-height:1.6;
+}
+.profile-image-validation>i{
+    margin-top:2px;
+    font-size:13px;
+}
+.profile-image-validation.is-valid{
+    border-color:#bbf7d0;
+    color:#15803d;
+    background:#f0fdf4;
+}
+.profile-image-validation.is-invalid{
+    border-color:#fecaca;
+    color:#b91c1c;
+    background:#fef2f2;
+}
+.profile-image-validation.is-loading{
+    border-color:#bfdbfe;
+    color:#1d4ed8;
+    background:#eff6ff;
+}

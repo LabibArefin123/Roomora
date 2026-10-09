@@ -1,0 +1,54 @@
+.profile-image-preview-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+    color: var(--sf-muted);
+    font-size: 9px;
+    overflow-wrap: anywhere;
+}
+.profile-image-status {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    color: #475569;
+    background: #f1f5f9;
+    font-weight: 800;
+}
+.profile-image-status::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #94a3b8;
+    content: "";
+}
+.profile-image-status.is-valid {
+    color: #15803d;
+    background: #f0fdf4;
+}
+.profile-image-status.is-valid::before {
+    background: #22c55e;
+}
+.profile-image-status.is-invalid {
+    color: #b91c1c;
+    background: #fef2f2;
+}
+.profile-image-status.is-invalid::before {
+    background: #ef4444;
+}
+.profile-image-status.is-uploading {
+    color: #1d4ed8;
+    background: #eff6ff;
+}
+.profile-image-status.is-uploading::before {
+    background: #3b82f6;
+    animation: profileImagePulse 1s ease infinite;
+}
+@keyframes profileImagePulse {
+    50% {
+        opacity: 0.4;
+    }
+}

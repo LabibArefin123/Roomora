@@ -1,0 +1,61 @@
+.profile-edit-field {
+    margin-top: 13px;
+}
+.profile-edit-field:first-of-type {
+    margin-top: 0;
+}
+.profile-edit-field label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--sf-text);
+    font-size: 9px;
+    font-weight: 750;
+}
+.profile-edit-input-wrap {
+    position: relative;
+}
+.profile-edit-input-wrap > i {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    z-index: 1;
+    color: #94a3b8;
+    font-size: 10px;
+}
+.profile-edit-input-wrap input,
+.profile-edit-input-wrap textarea {
+    width: 100%;
+    border: 1px solid var(--sf-border);
+    border-radius: 13px;
+    outline: 0;
+    color: var(--sf-text);
+    background: #f8fafc;
+    font-size: 10px;
+    transition: 0.2s ease;
+}
+.profile-edit-input-wrap input {
+    height: 45px;
+    padding: 0 12px 0 35px;
+}
+.profile-edit-input-wrap textarea {
+    min-height: 82px;
+    padding: 12px 12px 12px 35px;
+    resize: vertical;
+    line-height: 1.5;
+}
+.profile-edit-input-wrap input:focus,
+.profile-edit-input-wrap textarea:focus {
+    border-color: #93c5fd;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+.profile-edit-input-wrap input.is-invalid,
+.profile-edit-input-wrap textarea.is-invalid {
+    border-color: #fca5a5;
+}
+.profile-edit-error {
+    display: block;
+    margin-top: 5px;
+    color: #dc2626;
+    font-size: 8px;
+}

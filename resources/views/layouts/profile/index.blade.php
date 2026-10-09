@@ -119,23 +119,5 @@
             </div>
 
         </div>
-
-
-        <div class="profile-footer">
-
-            <div class="profile-footer-logo">
-                <i class="fas fa-hotel"></i>
-            </div>
-
-            <strong>Roomora</strong>
-
-            <span>Book smart. Stay comfortable.</span>
-
-            <small>
-                © {{ date('Y') }} Roomora. All rights reserved.
-            </small>
-
-        </div>
-
     </div>
 @endsection

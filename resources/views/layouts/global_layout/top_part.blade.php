@@ -59,7 +59,7 @@
 
                         <div class="profile-dropdown-divider"></div>
 
-                        <a href="{{ route('profiles.show', auth()->user()) }}" class="profile-dropdown-item">
+                        <a href="{{ route('profiles.index')}}" class="profile-dropdown-item">
                             <span class="profile-dropdown-item-icon">
                                 <i class="fas fa-user"></i>
                             </span>

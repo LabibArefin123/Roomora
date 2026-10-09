@@ -56,7 +56,7 @@ class AuthController extends Controller
                 ->log('User logged in');
 
             return redirect()
-                ->intended(route('dashboard'))
+                ->intended(route('home'))
                 ->with('success', 'Welcome back to ParkFlow.');
         }
 

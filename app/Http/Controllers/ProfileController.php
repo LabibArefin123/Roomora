@@ -69,72 +69,96 @@ class ProfileController extends Controller
 
     public function edit()
     {
-        $user = auth()->user();
+        $profile = auth()->user();
 
-        return view('layouts.profile.edit', compact('user'));
+        return view('layouts.profile.edit', compact('profile'));
     }
 
     public function update(Request $request)
     {
-        $user = auth()->user();
+        $profile = auth()->user();
 
         $validated = $request->validate([
-            'name' => [
-                'required',
-                'string',
-                'max:255',
-            ],
-
+            'name' => ['required', 'string', 'max:255'],
             'email' => [
                 'required',
                 'email',
                 'max:255',
-                Rule::unique('users', 'email')->ignore($user->id),
+                Rule::unique('users', 'email')->ignore($profile->id),
             ],
-
-            'phone' => [
-                'nullable',
-                'string',
-                'max:20',
-            ],
-
-            'address' => [
-                'nullable',
-                'string',
-                'max:1000',
-            ],
-
-            'profile_photo' => [
+            'phone' => ['nullable', 'string', 'max:20'],
+            'address' => ['nullable', 'string', 'max:1000'],
+            'profile_picture' => [
                 'nullable',
                 'image',
                 'mimes:jpg,jpeg,png,webp',
-                'max:2048',
+                'max:6143',
             ],
         ]);
 
-        if ($request->hasFile('profile_photo')) {
-            $photo = $request->file('profile_photo');
+        if ($request->hasFile('profile_picture')) {
+            $photo = $request->file('profile_picture');
 
-            $photoName = time() . '_' . $user->id . '.' .
-                $photo->getClientOriginalExtension();
+            if (!$photo->isValid()) {
+                $message = 'The image upload failed. Please select the image again.';
 
-            $photo->move(
-                public_path('uploads/profile'),
-                $photoName
-            );
+                if ($request->expectsJson()) {
+                    return response()->json(['message' => $message], 422);
+                }
 
-            $validated['profile_photo'] =
-                'uploads/profile/' . $photoName;
+                return back()->withErrors([
+                    'profile_picture' => $message,
+                ])->withInput();
+            }
+
+            $uploadPath = public_path('uploads/profile');
+
+            if (!is_dir($uploadPath) && !mkdir($uploadPath, 0755, true) && !is_dir($uploadPath)) {
+                $message = 'The profile image folder could not be created. Check folder permissions.';
+
+                if ($request->expectsJson()) {
+                    return response()->json(['message' => $message], 500);
+                }
+
+                return back()->withErrors([
+                    'profile_picture' => $message,
+                ])->withInput();
+            }
+
+            $extension = strtolower($photo->extension());
+            $photoName = 'profile_' . $profile->id . '_' . uniqid() . '.' . $extension;
+
+            try {
+                $photo->move($uploadPath, $photoName);
+            } catch (\Throwable $exception) {
+                report($exception);
+
+                $message = 'The image could not be saved. Check write permissions for public/uploads/profile.';
+
+                if ($request->expectsJson()) {
+                    return response()->json(['message' => $message], 500);
+                }
+
+                return back()->withErrors([
+                    'profile_picture' => $message,
+                ])->withInput();
+            }
+
+            $validated['profile_picture'] = 'uploads/profile/' . $photoName;
         }
 
-        $user->update($validated);
+        $profile->update($validated);
+
+        if ($request->expectsJson()) {
+            return response()->json([
+                'message' => 'Your profile has been updated successfully.',
+                'redirect' => route('profiles.index'),
+            ]);
+        }
 
         return redirect()
-            ->route('profile')
-            ->with(
-                'success',
-                'Your profile has been updated successfully.'
-            );
+            ->route('profiles.index')
+            ->with('success', 'Your profile has been updated successfully.');
     }
 
     public function updatePassword(Request $request)

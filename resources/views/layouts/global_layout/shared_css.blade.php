@@ -27,12 +27,36 @@
   <link rel="stylesheet" href="{{ asset('css/roomora/booking_part/shared_layout/booking_form_actions.css') }}">
 
   {{-- Profile Part --}}
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_body.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_menu.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_intro.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_about.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/profile_footer.css') }}">
+  {{-- Edit Profile Part --}}
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_header.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_card.css') }}">
+  
+  {{-- Profile Image Part Start --}}
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_layout.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_upload.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_preview.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_status.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_progress.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_resp.css') }}">
+  {{-- Profile Image Part End --}}
+
+  {{-- Profile Modal Start --}}
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_layout.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_header.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_body.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_details.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_resp.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_polish.css') }}">
+  {{-- Profile Modal END --}}
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_fields.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_actions.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_resp.css') }}">
+
+  {{-- Show Profile Part --}}
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/show_page/profile_body.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/show_page/profile_menu.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/show_page/profile_intro.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/show_page/profile_about.css') }}">
 
   {{-- Booking Show Page --}}
   <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_base.css') }}">
@@ -74,7 +98,7 @@
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_fields.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_actions.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_resp.css') }}">
-  
+
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/show_page/room_show_header.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/show_page/room_show_card.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/show_page/room_show_details.css') }}">
