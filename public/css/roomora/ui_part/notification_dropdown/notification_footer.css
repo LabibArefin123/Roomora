@@ -1,0 +1,45 @@
+.stayflow-notification-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 17px;
+    border-top: 1px solid #edf1f7;
+    color: #64748b;
+    background: #f8fafc;
+    font-size: 10px;
+    line-height: 1.5;
+}
+.stayflow-notification-footer i {
+    color: var(--sf-primary);
+    font-size: 12px;
+}
+.stayflow-notification-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 34px 20px;
+    text-align: center;
+}
+.stayflow-notification-empty > span {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    color: #64748b;
+    background: #f1f5f9;
+    font-size: 19px;
+}
+.stayflow-notification-empty strong {
+    color: var(--sf-dark);
+    font-size: 13px;
+    font-weight: 800;
+}
+.stayflow-notification-empty p {
+    margin: 6px 0 0;
+    color: var(--sf-muted);
+    font-size: 11px;
+    line-height: 1.6;
+}

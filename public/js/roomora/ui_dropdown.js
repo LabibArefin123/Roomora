@@ -8,11 +8,26 @@ document.addEventListener("DOMContentLoaded", function () {
     function setOpen(open) {
         dropdown.classList.toggle("is-open", open);
         toggle.setAttribute("aria-expanded", String(open));
+        menu.setAttribute("aria-hidden", String(!open));
+    }
+
+    function openProfile() {
+        // Close notifications before opening the profile menu.
+        document.dispatchEvent(
+            new CustomEvent("roomora:close-notification-dropdown")
+        );
+
+        setOpen(true);
     }
 
     toggle.addEventListener("click", function (event) {
         event.stopPropagation();
-        setOpen(!dropdown.classList.contains("is-open"));
+
+        if (dropdown.classList.contains("is-open")) {
+            setOpen(false);
+        } else {
+            openProfile();
+        }
     });
 
     menu.addEventListener("click", function (event) {
@@ -26,9 +41,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
+        if (event.key === "Escape" && dropdown.classList.contains("is-open")) {
             setOpen(false);
             toggle.focus();
         }
     });
+
+    // Allow the notification dropdown to close the profile menu.
+    document.addEventListener("roomora:close-profile-dropdown", function () {
+        setOpen(false);
+    });
 });
+

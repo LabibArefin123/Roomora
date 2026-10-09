@@ -1,0 +1,73 @@
+.stayflow-notification-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.stayflow-notification-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.stayflow-notification-toggle .notification-dot {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #ef4444;
+    box-sizing: content-box;
+}
+.stayflow-notification-toggle[aria-expanded="true"] {
+    background: #eff6ff;
+    color: var(--sf-primary);
+}
+.stayflow-notification-toggle:focus-visible {
+    outline: 3px solid rgba(59, 130, 246, 0.3);
+    outline-offset: 3px;
+}
+.stayflow-notification-menu {
+    position: absolute;
+    top: calc(100% + 13px);
+    right: -45px;
+    z-index: 1300;
+    width: min(390px, calc(100vw - 28px));
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow:
+        0 22px 55px rgba(15, 23, 42, 0.16),
+        0 5px 14px rgba(15, 23, 42, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(9px) scale(0.985);
+    transform-origin: top right;
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+}
+.stayflow-notification-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 54px;
+    width: 11px;
+    height: 11px;
+    border-top: 1px solid #e2e8f0;
+    border-left: 1px solid #e2e8f0;
+    background: #fff;
+    transform: rotate(45deg);
+}
+.stayflow-notification-dropdown.is-open .stayflow-notification-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}

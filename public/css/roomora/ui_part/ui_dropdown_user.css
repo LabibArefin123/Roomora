@@ -1,49 +1,84 @@
+/* Profile Header */
 .profile-dropdown-header {
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 13px 10px;
 }
+
+/* Fixed Dropdown Avatar */
 .profile-dropdown-avatar {
-    display: grid;
-    width: 47px;
-    height: 47px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
     flex: 0 0 47px;
-    place-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    min-width: 47px;
+    max-width: 47px;
+    height: 47px;
+    min-height: 47px;
+    max-height: 47px;
     overflow: hidden;
     border: 1px solid #dbeafe;
     border-radius: 15px;
-    color: var(--sf-primary);
+    color: var(--sf-primary, #2563eb);
     background: linear-gradient(145deg, #eff6ff, #dbeafe);
     font-size: 17px;
 }
-.profile-dropdown-avatar img {
+
+/* Dropdown Profile Image */
+.profile-dropdown-avatar > img.profile-picture {
     display: block;
+    box-sizing: border-box;
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
     height: 100%;
+    min-height: 0;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
     object-fit: cover;
+    object-position: center;
     border-radius: inherit;
 }
-.profile-dropdown-user {
-    min-width: 0;
-    flex: 1;
+
+/* Dropdown Fallback Icon */
+.profile-dropdown-avatar > .profile-avatar-fallback {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+}
+
+/* User Information */
+.profile-dropdown-user {
+    display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
+    min-width: 0;
     gap: 5px;
 }
+
 .profile-dropdown-user strong {
     overflow: hidden;
-    color: var(--sf-dark);
+    color: var(--sf-dark, #172033);
     font-size: 13px;
     font-weight: 800;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 .profile-dropdown-user span {
     overflow: hidden;
-    color: var(--sf-muted);
+    color: var(--sf-muted, #64748b);
     font-size: 10px;
     line-height: 1.5;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+

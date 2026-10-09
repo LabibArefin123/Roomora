@@ -1,0 +1,41 @@
+.stayflow-notification-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 20px;
+    border-bottom: 1px solid #edf1f7;
+    background: linear-gradient(135deg, #fff, #f8fbff);
+}
+.stayflow-notification-eyebrow {
+    color: var(--sf-primary);
+    font-size: 9px;
+    font-weight: 850;
+    letter-spacing: 1.2px;
+}
+.stayflow-notification-header h3 {
+    margin: 5px 0 4px;
+    color: var(--sf-dark);
+    font-size: 18px;
+    font-weight: 850;
+    letter-spacing: -0.4px;
+}
+.stayflow-notification-header p {
+    margin: 0;
+    color: var(--sf-muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+.stayflow-notification-count {
+    display: grid;
+    min-width: 30px;
+    height: 30px;
+    padding: 0 8px;
+    place-items: center;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    color: var(--sf-primary);
+    background: #eff6ff;
+    font-size: 11px;
+    font-weight: 850;
+}

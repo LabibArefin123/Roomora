@@ -7,3 +7,4 @@
 <script src="{{ asset('js/roomora/profile_page/profile_modal_upload.js') }}" defer></script>
 <script src="{{ asset('js/roomora/notification.js') }}" defer></script>
 <script src="{{ asset('js/roomora/ui_dropdown.js') }}" defer></script>
+<script src="{{ asset('js/roomora/notif_dropdown.js') }}" defer></script>

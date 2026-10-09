@@ -1,0 +1,6 @@
+.stayflow-notification-menu:focus{outline:none}
+.stayflow-notification-toggle:focus-visible{outline-offset:3px}
+.stayflow-notification-list:focus-visible{outline:2px solid rgba(59,130,246,.35);outline-offset:-2px}
+@media(prefers-reduced-motion:reduce){
+.stayflow-notification-menu,.stayflow-notification-item{transition:none}
+}

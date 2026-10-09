@@ -1,0 +1,38 @@
+@media (max-width: 600px) {
+    .stayflow-notification-menu {
+        right: -48px;
+        width: min(370px, calc(100vw - 24px));
+        border-radius: 17px;
+    }
+    .stayflow-notification-header {
+        padding: 16px;
+    }
+    .stayflow-notification-item {
+        gap: 10px;
+        padding: 13px;
+    }
+    .stayflow-notification-list {
+        max-height: min(55vh, 390px);
+    }
+}
+@media (max-width: 380px) {
+    .stayflow-notification-menu {
+        right: -42px;
+        width: calc(100vw - 20px);
+    }
+    .stayflow-notification-header h3 {
+        font-size: 16px;
+    }
+    .stayflow-notification-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        border-radius: 11px;
+    }
+    .stayflow-notification-title-row {
+        align-items: flex-start;
+    }
+    .stayflow-notification-title-row strong {
+        white-space: normal;
+    }
+}

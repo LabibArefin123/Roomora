@@ -32,21 +32,33 @@
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_card.css') }}">
 
   {{-- Profile Image Part Start --}}
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_layout.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_upload.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_preview.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_status.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_progress.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_resp.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_layout.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_upload.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_preview.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_status.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_progress.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_resp.css') }}">
   {{-- Profile Image Part End --}}
 
   {{-- Profile Modal Start Section --}}
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_layout.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_header.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_body.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_details.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_resp.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_polish.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_layout.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_header.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_body.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_details.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_resp.css') }}">
+  <link rel="stylesheet"
+      href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_polish.css') }}">
   {{-- Profile Modal End Section --}}
 
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_fields.css') }}">
@@ -69,13 +81,22 @@
 
   {{-- Navigation Part --}}
   {{-- Start of UI Part --}}
-  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_base.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_layout.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_menu.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_items.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_user.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_logout.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_resp.css') }}">
   {{-- End of UI Part --}}
+  {{-- Start of Notification UI Part --}}
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/notification_dropdown/notification_layout.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/notification_dropdown/notification_header.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/notification_dropdown/notification_items.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/notification_dropdown/notification_footer.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/notification_dropdown/notification_resp.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/notification_dropdown/notification_accessibility.css') }}">
+  {{-- End of Notification UI Part --}}
+
   <link rel="stylesheet" href="{{ asset('css/roomora/mobile_navigation.css') }}">
 
   {{-- Alert Part --}}
