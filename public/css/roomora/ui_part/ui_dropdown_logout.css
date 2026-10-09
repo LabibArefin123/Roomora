@@ -1,0 +1,68 @@
+.profile-logout-form {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.profile-logout-button {
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    background: transparent;
+    color: var(--sf-text);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: normal;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+.profile-logout-button .profile-dropdown-item-icon {
+    margin: 0;
+}
+.profile-logout-button .profile-dropdown-item-content {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+.profile-logout-button .profile-dropdown-item-content strong,
+.profile-logout-button .profile-dropdown-item-content small {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.profile-logout-button .profile-dropdown-arrow {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.profile-logout-button:hover {
+    border-color: #fee2e2;
+    background: #fff5f5;
+}
+.profile-logout-button:hover .profile-dropdown-item-icon {
+    color: #dc2626;
+    background: #fee2e2;
+}
+.profile-logout-button:hover .profile-dropdown-item-content strong,
+.profile-logout-button:hover .profile-dropdown-arrow {
+    color: #dc2626;
+}
+.profile-logout-button:active {
+    transform: scale(0.99);
+}
+.profile-logout-button:focus-visible {
+    outline: 2px solid rgba(220, 38, 38, 0.35);
+    outline-offset: 2px;
+}

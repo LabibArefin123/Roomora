@@ -30,7 +30,7 @@
   {{-- Edit Profile Part --}}
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_header.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_card.css') }}">
-  
+
   {{-- Profile Image Part Start --}}
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_layout.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_upload.css') }}">
@@ -40,14 +40,15 @@
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_part/profile_image_resp.css') }}">
   {{-- Profile Image Part End --}}
 
-  {{-- Profile Modal Start --}}
+  {{-- Profile Modal Start Section --}}
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_layout.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_header.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_body.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_details.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_resp.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_image_modal/profile_image_modal_polish.css') }}">
-  {{-- Profile Modal END --}}
+  {{-- Profile Modal End Section --}}
+
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_fields.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_actions.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/profile_part/edit_page/profile_edit_resp.css') }}">
@@ -67,7 +68,14 @@
   <link rel="stylesheet" href="{{ asset('css/roomora/booking_page/show_page/booking_show_actions.css') }}">
 
   {{-- Navigation Part --}}
-  <link rel="stylesheet" href="{{ asset('css/roomora/ui_dropdown.css') }}">
+  {{-- Start of UI Part --}}
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_base.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_menu.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_items.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_user.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_logout.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/ui_part/ui_dropdown_resp.css') }}">
+  {{-- End of UI Part --}}
   <link rel="stylesheet" href="{{ asset('css/roomora/mobile_navigation.css') }}">
 
   {{-- Alert Part --}}

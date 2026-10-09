@@ -78,24 +78,7 @@
     @stack('scripts')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.stayflow-alert-close').forEach(function(button) {
-                button.addEventListener('click', function() {
-                    this.closest('.stayflow-alert')?.remove();
-                });
-            });
-        });
-    </script>
-
-    <script src="{{ asset('js/roomora/password.js') }}"></script>
-    <script src="{{ asset('js/roomora/profile_page/profile_modal_init.js') }}" defer></script>
-    <script src="{{ asset('js/roomora/profile_page/profile_modal_helpers.js') }}" defer></script>
-    <script src="{{ asset('js/roomora/profile_page/profile_modal_preview.js') }}" defer></script>
-    <script src="{{ asset('js/roomora/profile_page/profile_modal_validation.js') }}" defer></script>
-    <script src="{{ asset('js/roomora/profile_page/profile_modal_events.js') }}" defer></script>
-    <script src="{{ asset('js/roomora/profile_page/profile_modal_upload.js') }}" defer></script>
-    <script src="{{ asset('js/roomora/ui_dropdown.js') }}" defer></script>
+    @include('layouts.global_layout.shared_js')
 </body>
 
 

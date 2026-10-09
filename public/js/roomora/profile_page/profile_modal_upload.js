@@ -70,8 +70,8 @@
                 app.progressBox.hidden = true;
 
                 const errors = response.errors || {};
-                const photoError = errors.profile_photo
-                    ? errors.profile_photo[0]
+                const photoError = errors.profile_picture
+                    ? errors.profile_picture[0]
                     : null;
 
                 const message =

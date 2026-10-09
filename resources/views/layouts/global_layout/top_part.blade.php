@@ -22,44 +22,38 @@
                 <div class="stayflow-profile-dropdown" id="profileDropdown">
                     <button type="button" class="stayflow-avatar profile-dropdown-toggle" id="profileDropdownToggle"
                         aria-label="Open profile menu" aria-expanded="false" aria-controls="profileDropdownMenu">
-                        @if (auth()->user()->profile_photo)
-                            <img src="{{ asset(auth()->user()->profile_photo) }}" alt="{{ auth()->user()->name }}"
+                        @if (auth()->user()->profile_picture)
+                            <img src="{{ asset(auth()->user()->profile_picture) }}" alt="{{ auth()->user()->name }}"
                                 class="stayflow-avatar-image">
                         @else
-                            <i class="fas fa-user"></i>
+                            <i class="fas fa-user" aria-hidden="true"></i>
                         @endif
+
                         <span class="profile-dropdown-indicator">
-                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </span>
                     </button>
 
                     <div class="profile-dropdown-menu" id="profileDropdownMenu">
                         <div class="profile-dropdown-header">
                             <div class="profile-dropdown-avatar">
-                                @if (auth()->user()->profile_photo)
-                                    <img src="{{ asset(auth()->user()->profile_photo) }}"
+                                @if (auth()->user()->profile_picture)
+                                    <img src="{{ asset(auth()->user()->profile_picture) }}"
                                         alt="{{ auth()->user()->name }}">
                                 @else
-                                    <i class="fas fa-user"></i>
+                                    <i class="fas fa-user" aria-hidden="true"></i>
                                 @endif
-
                             </div>
 
                             <div class="profile-dropdown-user">
-                                <strong>
-                                    {{ auth()->user()->name }}
-                                </strong>
-
-                                <span>
-                                    {{ auth()->user()->email }}
-                                </span>
+                                <strong>{{ auth()->user()->name }}</strong>
+                                <span>{{ auth()->user()->email }}</span>
                             </div>
-
                         </div>
 
                         <div class="profile-dropdown-divider"></div>
 
-                        <a href="{{ route('profiles.index')}}" class="profile-dropdown-item">
+                        <a href="{{ route('profiles.index') }}" class="profile-dropdown-item">
                             <span class="profile-dropdown-item-icon">
                                 <i class="fas fa-user"></i>
                             </span>

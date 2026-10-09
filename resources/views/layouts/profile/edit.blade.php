@@ -35,11 +35,11 @@
                 </div>
                 <div class="profile-image-modal-body">
                     <div class="profile-image-modal-visual" id="profileImageModalVisual">
-                        <img src="{{ $profile->profile_photo ? asset($profile->profile_photo) : '' }}"
+                        <img src="{{ $profile->profile_picture ? asset($profile->profile_picture) : '' }}"
                             alt="{{ $profile->name }}" id="profileImageModalImg"
-                            @if (!$profile->profile_photo) hidden @endif>
+                            @if (!$profile->profile_picture) hidden @endif>
                         <div class="profile-image-modal-empty" id="profileImageModalEmpty"
-                            @if ($profile->profile_photo) hidden @endif>
+                            @if ($profile->profile_picture) hidden @endif>
                             <i class="fas fa-user"></i>
                             <span>No image selected</span>
                         </div>
@@ -64,8 +64,8 @@
                     <div class="profile-edit-photo-upload">
                         <div class="profile-edit-photo-section">
                             <div class="profile-edit-photo" id="profileEditCurrentPhoto">
-                                @if ($profile->profile_photo)
-                                    <img src="{{ asset($profile->profile_photo) }}" alt="{{ $profile->name }}">
+                                @if ($profile->profile_picture)
+                                    <img src="{{ asset($profile->profile_picture) }}" alt="{{ $profile->name }}">
                                 @else
                                     <i class="fas fa-user"></i>
                                 @endif
@@ -77,7 +77,7 @@
                                     <i class="fas fa-camera"></i>
                                     Change Photo
                                 </label>
-                                <input type="file" name="profile_photo" id="profilePhotoInput"
+                                <input type="file" name="profile_picture" id="profilePhotoInput"
                                     accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" hidden>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <span>Select an image to validate its size and dimensions.</span>
                         </div>
 
-                        @error('profile_photo')
+                        @error('profile_picture')
                             <small class="profile-edit-error">{{ $message }}</small>
                         @enderror
                     </div>
@@ -107,8 +107,8 @@
                         <button type="button" class="profile-edit-image-preview-trigger" id="profileImagePreviewBtn"
                             aria-label="View profile image in full size">
                             <div class="profile-edit-image-preview" id="profileImagePreview">
-                                @if ($profile->profile_photo)
-                                    <img src="{{ asset($profile->profile_photo) }}" alt="{{ $profile->name }}"
+                                @if ($profile->profile_picture)
+                                    <img src="{{ asset($profile->profile_picture) }}" alt="{{ $profile->name }}"
                                         id="profileImagePreviewImg">
                                 @else
                                     <div class="profile-image-placeholder" id="profileImagePlaceholder">

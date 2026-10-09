@@ -1,0 +1,30 @@
+@media (max-width: 380px) {
+    .profile-dropdown-menu {
+        right: -5px;
+        width: min(290px, calc(100vw - 24px));
+    }
+    .profile-dropdown-header {
+        gap: 10px;
+        padding: 11px 8px;
+    }
+    .profile-dropdown-item {
+        gap: 9px;
+        padding: 9px;
+    }
+    .profile-dropdown-item-icon {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .profile-dropdown-toggle,
+    .profile-dropdown-indicator,
+    .profile-dropdown-menu,
+    .profile-dropdown-item,
+    .profile-dropdown-item-icon,
+    .profile-dropdown-arrow,
+    .profile-logout-button {
+        transition: none;
+    }
+}
