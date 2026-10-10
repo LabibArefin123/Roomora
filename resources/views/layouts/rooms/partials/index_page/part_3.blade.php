@@ -78,9 +78,33 @@
         @endforeach
     </div>
 
+
     @if ($rooms->hasPages())
-        <div class="rooms-pagination">
-            {{ $rooms->links() }}
+        <div class="room-pagination">
+            <div class="room-pagination-info">
+                <span>Page</span>
+                <span class="current-page">{{ $rooms->currentPage() }}</span>
+                <span class="page-divider">of</span>
+                <span class="total-pages">{{ $rooms->lastPage() }}</span>
+            </div>
+
+            <nav aria-label="Room pagination">
+                <ul class="pagination">
+                    <li class="page-item {{ $rooms->onFirstPage() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $rooms->previousPageUrl() ?? '#' }}" aria-label="Previous"
+                            @if ($rooms->onFirstPage()) aria-disabled="true" tabindex="-1" @endif>
+                            <i class="bi bi-chevron-left"></i>
+                        </a>
+                    </li>
+
+                    <li class="page-item {{ $rooms->hasMorePages() ? '' : 'disabled' }}">
+                        <a class="page-link" href="{{ $rooms->nextPageUrl() ?? '#' }}" aria-label="Next"
+                            @unless ($rooms->hasMorePages()) aria-disabled="true" tabindex="-1" @endunless>
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     @endif
 @else

@@ -121,7 +121,9 @@
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/index_page/room_results.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/index_page/room_card.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/index_page/room_content.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/index_page/room_footer.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/index_page/room_footer_layout.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/index_page/room_footer_buttons.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/roomora/room_part/index_page/room_footer_resp.css') }}">
 
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_header.css') }}">
   <link rel="stylesheet" href="{{ asset('css/roomora/room_part/shared_layout/room_form_card.css') }}">

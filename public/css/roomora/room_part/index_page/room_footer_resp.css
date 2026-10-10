@@ -1,0 +1,63 @@
+/* Tablet and Mobile */
+@media (max-width: 575.98px) {
+    .room-pagination {
+        gap: 12px;
+        margin-top: 20px;
+        padding-top: 13px;
+    }
+
+    .room-pagination-info {
+        gap: 5px;
+        font-size: 11px;
+    }
+
+    .room-pagination-info .current-page,
+    .room-pagination-info .total-pages {
+        min-width: 25px;
+        height: 25px;
+        border-radius: 7px;
+        font-size: 10px;
+    }
+
+    .room-pagination .pagination {
+        gap: 5px;
+    }
+
+    .room-pagination .page-link {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px !important;
+    }
+}
+
+/* Very Small Phones */
+@media (max-width: 359.98px) {
+    .room-pagination {
+        gap: 10px;
+    }
+
+    .room-pagination-info {
+        gap: 4px;
+        font-size: 10px;
+    }
+
+    .room-pagination-info .current-page,
+    .room-pagination-info .total-pages {
+        min-width: 22px;
+        height: 23px;
+        padding: 0 5px;
+    }
+
+    .room-pagination .page-link {
+        width: 31px;
+        height: 31px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .room-pagination .page-link {
+        transition: none;
+        transform: none;
+    }
+}

@@ -1,0 +1,65 @@
+/* Room Pagination Layout */
+.room-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px 0 4px;
+    border-top: 1px solid #eef2f7;
+}
+
+/* Page Information */
+.room-pagination-info {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.room-pagination-info .current-page,
+.room-pagination-info .total-pages {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 27px;
+    height: 27px;
+    padding: 0 7px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #334155;
+    background: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.room-pagination-info .current-page {
+    border-color: #bfdbfe;
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.room-pagination-info .page-divider {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* Navigation */
+.room-pagination nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.room-pagination .pagination {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+}
